@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, 'Poppins';
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  background: linear-gradient(45deg, #ff75f8, #7577ff, #ffe675, #ffa875);
+  background-size: 400% 400%;
+  animation: gradientBg 10s ease infinite;  
+}
+@keyframes gradientBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.container {
+  position: relative;
+  margin: auto;
+}
+.shape {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  filter: blur(1px);
+}
+#shape1 {
+  top: 0;
+  left: 0;
+  background: rgb(255, 128, 128);
+  border-radius: 10px;
+}
+#shape2 {
+  top: 100%;
+  left: 100%;
+  background: rgb(128, 128, 255);
+  border-radius: 10px;
+}
+#shape3 {
+  background: rgb(255, 255, 128);
+  border-radius: 50%;
+  top: 100%;
+  left: 0;
+}
+#shape4 {
+  background: rgb(128, 255, 128);
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  top: 0%;
+  left: 100%;
+}
+.calculator {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+.row1, .row2, .row3, .row4, .row5, .row6 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+input {
+  width: 270px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 10px;
+  outline: none;  
+  padding: 10px;
+  text-align: right;
+  margin: 5px 5px 20px;
+  font-size: 40px;
+}
+button {  
+  margin: 5px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+button,
+button i {
+  font-size: 25px;
+}
+#equal {
+  width: 130px;
+  background: rgba(0, 0, 255, 0.5);
+}
+#clear {
+  width: 130px;
+  background: rgba(255, 255, 0, 0.5);
+}
+#back {
+  background: rgba(255, 0, 0, 0.5);
+}
+.operator {
+  background: rgba(0, 255, 0, 0.5);
+}
